@@ -9,10 +9,17 @@ function winner(b1, b2, b3) {
     b3.classList.add("win")
     if (b1.innerHTML ==`X`) {
         turn.innerHTML =`${player1} won the game`;
+        setTimeout(() => {
+            submit();
+        },1000);
     }
     if(b1.innerHTML == `O`) {
         turn.innerHTML = `${player2} won the game`;
+        setTimeout(() => {
+            submit();
+        },1000);
     }
+    
 }
 function getWinner() {
     let box1 = document.getElementById('box1');
